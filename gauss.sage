@@ -9,9 +9,10 @@ class GaussianRational:
         return GaussianRational(self.x+right.x, self.y+right.y)
     def __sub__(self, right):
         return GaussianRational(self.x-right.x, self.y-right.y)
-    def __crazy__(self, crazy):
-        return 'I'm crazy'
+    def crazy(self, crazy):
+        return "I'm crazy"
     def __mul__(self, right):
         if not isinstance(right, GaussianRational):
             raise TypeError
         return GaussianRational((self.x + self.y)*(right.x + right.y))
+    
